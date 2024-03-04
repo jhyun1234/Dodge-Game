@@ -135,4 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0}
   targetTransform: {fileID: 0}
-  speed: 5
+  speed: 15

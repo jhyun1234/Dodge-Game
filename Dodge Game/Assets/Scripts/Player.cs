@@ -7,6 +7,7 @@ public class Player: MonoBehaviour
     private Animator animator;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rigidbody2D;
+    private FlashMaterial flashMaterial;
     [SerializeField] Vector2 direction;
     [SerializeField] float speed = 500.0f;
 
@@ -15,6 +16,7 @@ public class Player: MonoBehaviour
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        flashMaterial = GetComponent<FlashMaterial>();
         
     }
 
@@ -61,6 +63,18 @@ public class Player: MonoBehaviour
         {
            
             spriteRenderer.flipX = true;
+        }
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Asteroid astroid = collision.GetComponent<Asteroid>();
+
+        if(astroid != null)
+        {
+            StartCoroutine(flashMaterial.HitEffect(0.25f));
+            
         }
     }
 

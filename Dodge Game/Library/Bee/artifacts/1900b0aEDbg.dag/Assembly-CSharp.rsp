@@ -374,6 +374,7 @@
 -analyzer:"D:/unity/2022.3.14f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/unity/2022.3.14f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Asteroid.cs"
+"Assets/Scripts/AsteroidManager.cs"
 "Assets/Scripts/FlashMaterial.cs"
 "Assets/Scripts/Player.cs"
 -langversion:9.0
